@@ -12,7 +12,8 @@ Debido a que durante la construcción del pipeline tuve un problema con la conex
 
 **build:** Este trabajo se ejecuta en una máquina virtual Ubuntu y consta de varios pasos.
 
-**services:* Define los servicios adicionales que se necesitan para ejecutar los pasos del trabajo. Aquí, estamos utilizando un servicio MySQL con la imagen de MySQL versión 8.0. Estamos configurando las credenciales de acceso y exponiendo el puerto 3606.
+**services:** Define los servicios adicionales que se necesitan para ejecutar los pasos del trabajo. Aquí, estamos utilizando un servicio MySQL con la imagen de MySQL versión 8.0. Estamos configurando las credenciales de acceso y exponiendo el puerto 3606.
 
 **steps:** Define los pasos individuales que se ejecutarán dentro del trabajo. Aquí, los pasos incluyen instalar Docker, realizar la configuración inicial del repositorio, configurar Java 17, esperar a que MySQL esté listo, compilar la aplicación con Maven, ejecutar las pruebas unitarias y ejecutar la aplicación Spring Boot.
 
+**el archivo lo pueden encontrar dentro de la carpeta .github como lo recomienda la documentación**
