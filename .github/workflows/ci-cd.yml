@@ -19,6 +19,15 @@ jobs:
           java-version: '17'
           distribution: 'adopt'
 
+      - name: Set up MySQL
+        uses: spycyroll/setup-mysql@v1
+        with:
+          mysql-version: '8.0'
+          root-password: ${{ secrets.DB_PASSWORD }}
+          user: ${{ secrets.DB_USERNAME }}
+          password: ${{ secrets.DB_PASSWORD }}
+          port: 3606
+
       - name: Build with Maven
         run: mvn clean install
 
