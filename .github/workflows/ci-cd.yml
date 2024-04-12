@@ -20,7 +20,7 @@ jobs:
           distribution: 'adopt'
 
       - name: Set up MySQL
-        uses: spycyroll/setup-mysql@v1
+        uses: mysql/setup-mysql@v2
         with:
           mysql-version: '8.0'
           root-password: ${{ secrets.DB_PASSWORD }}
