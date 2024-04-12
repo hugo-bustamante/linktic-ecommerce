@@ -22,11 +22,6 @@ jobs:
       - name: Install Docker
         uses: docker/setup-buildx-action@v1
 
-      - name: Install dockerize
-        run: |
-          wget https://github.com/jwilder/dockerize/releases/download/v0.6.1/dockerize-linux-amd64-v0.6.1.tar.gz
-          tar -C /usr/local/bin -xzvf dockerize-linux-amd64-v0.6.1.tar.gz
-
       - name: Checkout repository
         uses: actions/checkout@v2
 
@@ -34,7 +29,7 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: '17'
-          distribution: 'adopt'
+          distribution: 'temurin'
 
       - name: Wait for MySQL to be ready
         run: dockerize -wait tcp://localhost:3606 -timeout 1m
